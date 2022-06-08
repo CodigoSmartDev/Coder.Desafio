@@ -167,8 +167,6 @@ body{
 .encabezado-empresa{
     display: flex;
     text-align: center;
-    width: 50%;
-    
 }
 
 .parrafo-empresa{
