@@ -20,12 +20,27 @@ body{
     margin-top: 40px;
 }
 
+  /* VARIABLES */
+
 .container a{
     text-decoration: none;
     color: var(--c-blue)
 }
 
-    /* Barra de navegación */
+.parrafo{
+    font-size: 20px;
+    color: var(--c-blue2);
+    line-height: 160%;
+    letter-spacing: -.02em;
+    margin: 20px 0;
+    padding: 0 15%;
+    text-align: center;
+}
+
+  /* ------------------------------------ */
+
+
+    /* INDEX BARRA DE NAVEGACION */
 
 .navbar div{
     background: var(--c-white1);
@@ -63,7 +78,9 @@ body{
     font-size: 15px; 
 }
 
-    /* Logotipo en Nav */
+    /*-------------------------  */
+
+    /* --- LOGOTIPO NAV --- */
 
 .logo{
     position: fixed;
@@ -75,7 +92,9 @@ body{
     text-shadow: 0 0 3px rgba(0, 0, 0, 5);
 }
 
-  /* Contenido */
+    /* ------------------------------------- */
+
+   /* --- CONTENIDO --- */
 
 .titulo-container{
     margin: 12px 0;
@@ -135,44 +154,57 @@ body{
     padding-left: 41%;
 }
 
-.h2-container .parrafo{
-    font-size: 20px;
-    color: var(--c-blue2);
-    line-height: 160%;
-    letter-spacing: -.02em;
-    margin: 20px 0;
-    padding: 0 15%;
+    /* -------------------------------- */
+
+    /* ---  HTML PRODUCTOS --- */ 
+
+
+.titulo-productos{
+    display: flex;
     text-align: center;
+    
 }
 
-  /*  FOOTER */
-
-.footer-container{
-    background: var(--c-white1);
-    margin: 40px 0 3px 0;
-    border-top: 1px solid var(--c-grey);
+.h1-productos{
+    width: 100%;
 }
 
-.footer-container ul li{
+.titulo-productos h1{
+    padding-top: 65px;
+    color: var(--c-black);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -.09em;
+  }
+
+ h2, h3, h4, h5{
+    color: var(--c-black);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -.09em; 
+    margin: 10px; 
+}
+
+.portada-uno img, .portada-dos img{
+    width: 100%;
+}
+
+  .portada-uno, .portada-dos{
+      display: flex;
+      padding: 5px;
+  }
+
+  .portada-liv, .portada-ilu, .portada-deco, .portada-com{
     padding: 5px;
-    color: var(--c-blue);
-    display: inline-block;
-    padding: 5px;
-    margin: 10px;
-}
-
-.footer-container .desarrollo{
-    margin-left: 52%;
-    margin-right: 1px;
-    padding-right: 0;
-}
-
-.footer-container .desarrollo i {
-    padding-bottom: 2px;
-}
+  }
 
 
-    /* HTML INGRESAR */
+    /* ----------------------------- */
+
+
+    /* --- HTML INGRESAR --- */
 
 .cuenta-container .cuenta {
     padding-top: 70px;
@@ -181,11 +213,14 @@ body{
 }
 
 .cuenta h1 {
-    display: block;
     padding-top: 20px;
     margin: 0 0 100px 34%;
-    font-size: 35px;
-    color: #333333;
+    display: block;
+    color: var(--c-black);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -.09em;
 }
 
 .cuenta .loguear input {
@@ -227,7 +262,10 @@ body{
     margin: 10px;
 }
 
-  /* HTML Contacto */
+    /* ------------------------ */
+
+
+    /* HTML Contacto */
 
   .contacto-container {
     padding-top: 100px;
@@ -319,9 +357,39 @@ body{
 }
 
 .redes .fa-instagram:hover{
-      border-radius: 40px;
-      vertical-align: middle;
-      background: #d6249f;
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-      box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    border-radius: 40px;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
+
+
+    /* ---  FOOTER --- */
+
+    .footer-container{
+        background: var(--c-white1);
+        margin: 40px 0 3px 0;
+        border-top: 1px solid var(--c-grey);
+    }
+    
+    .footer-container ul li{
+        padding: 5px;
+        color: var(--c-blue);
+        display: inline-block;
+        padding: 5px;
+        margin: 10px;
+    }
+    
+    .footer-container .desarrollo{
+        margin-left: 52%;
+        margin-right: 1px;
+        padding-right: 0;
+    }
+    
+    .footer-container .desarrollo i {
+        padding-bottom: 2px;
+    }
+    
+        /* ------------------------------- */
+    
