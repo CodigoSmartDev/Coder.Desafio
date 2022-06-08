@@ -156,20 +156,39 @@ body{
 
     /* -------------------------------- */
 
+
+    /* --- HTML EMPRESA --- */
+
+.container-empresa{
+    background-image: url(../Imagenes/Empresa/taller.jpg);
+    background-size: 100% ;
+}
+
+.parrafo-empresa{
+    font-size: 20px;
+    color: var(--c-black);
+    line-height: 160%;
+    letter-spacing: -.02em;
+    margin: 20px 0;
+    padding: 0 15%;
+    justify-content: flex-end; 
+}
+
+
+    
     /* ---  HTML PRODUCTOS --- */ 
 
 
-.titulo-productos{
+.encabezado-productos, .encabezado-empresa{
     display: flex;
-    text-align: center;
-    
+    text-align: center;  
 }
 
-.h1-productos{
+.h1{
     width: 100%;
 }
 
-.titulo-productos h1{
+.encabezado-productos h1, .encabezado-empresa h1{
     padding-top: 65px;
     color: var(--c-black);
     font-size: 38px;
