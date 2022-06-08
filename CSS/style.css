@@ -164,14 +164,19 @@ body{
     background-size: 100% ;
 }
 
+.encabezado-empresa{
+    display: flex;
+    text-align: center;
+    width: 50%;
+    
+}
+
 .parrafo-empresa{
+    padding-top: 60px;
     font-size: 20px;
     color: var(--c-black);
     line-height: 160%;
-    letter-spacing: -.02em;
-    margin: 20px 0;
-    padding: 0 15%;
-    justify-content: flex-end; 
+    letter-spacing: -.02em; 
 }
 
 
@@ -179,7 +184,7 @@ body{
     /* ---  HTML PRODUCTOS --- */ 
 
 
-.encabezado-productos, .encabezado-empresa{
+.encabezado-productos{
     display: flex;
     text-align: center;  
 }
