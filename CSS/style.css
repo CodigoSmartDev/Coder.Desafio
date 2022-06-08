@@ -166,13 +166,20 @@ body{
 
 .encabezado-empresa{
     display: flex;
-    text-align: center;
+    text-align: end;
+    padding: 5% 0 15% 0; 
+}
+
+.encabezado-empresa h1{
+    padding-right: 20%;
+    color: rgb(156, 154, 154)!important
 }
 
 .parrafo-empresa{
-    padding-top: 60px;
+    text-align: justify;
+    padding: 5% 5% 0px 40%;
     font-size: 20px;
-    color: var(--c-black);
+    color: #f1eaea;
     line-height: 160%;
     letter-spacing: -.02em; 
 }
