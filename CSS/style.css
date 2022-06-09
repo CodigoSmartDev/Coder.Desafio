@@ -161,13 +161,13 @@ body{
 
 .container-empresa{
     background-image: url(../Imagenes/Empresa/taller.jpg);
-    background-size: 100% ;
+    background-size: 100%;
 }
 
 .encabezado-empresa{
     display: flex;
     text-align: end;
-    padding: 5% 0 15% 0; 
+    padding: 5% 0 14% 0; 
 }
 
 .encabezado-empresa h1{
