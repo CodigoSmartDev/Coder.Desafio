@@ -14,10 +14,8 @@
 }
 
 body{
-    background: whitesmoke;
-    width: 100%;
+    background: whitesmoke;  
     font-family: Inter,Helvetica,Arial,sans-serif;
-    margin-top: 40px;
 }
 
   /* VARIABLES */
@@ -34,21 +32,46 @@ p{
     letter-spacing: -.02em;
     margin: 20px 0;
     padding: 0 15%;
-    text-align: center;
+    /* text-align: center; */
 }
 
   /* ------------------------------------ */
 
+.container-inicio{
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container-inicio header,
+.container-inicio footer{
+    grid-column: 1/6;
+    background: var(--c-white1);
+    border-top: 1px solid var(--c-grey);
+}
+
+.container-inicio main {
+    grid-column: 1/6;
+}
+
+.container-inicio header{
+    position: fixed;
+    width: 100%;
+}
+
+.container-inicio section{
+    grid-column: 1/6;
+    text-align: center;
+}
 
     /* BARRA DE NAVEGACION */
 
-.navbar div{
+/* .container-navbar{
+    position: fixed;
+    top: 0;
     background: var(--c-white1);
     width: 100%;
     height: 70px;
-    position: fixed;
-    top: 0px;
-    z-index: 5;
 }
 
 .navbar div ul{
@@ -83,21 +106,22 @@ p{
 
     /* --- LOGOTIPO NAV --- */
 
-.logo{
+/* .logo{
     position: fixed;
-    z-index: 10;
+    top: 0;
+    padding-left: 20px;
     font-family: 'Shadows Into Light', cursive;
     font-size: 35px;
-    margin: -35px 0 0 40px;
-    color: var(--c-black);
-    text-shadow: 0 0 3px rgba(0, 0, 0, 5);
-}
+    /* margin: 10px 0 0 40px; */
+    /* color: var(--c-black);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 5);  
+}*/
 
     /* ------------------------------------- */
 
    /* --- CONTENIDO INICIO--- */
 
-.titulo-container{
+/* .titulo-container{
     margin: 12px 0;
 }
 
@@ -133,6 +157,10 @@ p{
     color: var(--c-white);
 }
 
+.imagen-portada{
+    display: flex;
+}
+
 .h2-container{
     margin: 50px;
 }
@@ -152,8 +180,8 @@ p{
 }
 
 .h2-container .calidad{
-    padding-left: 41%;
-}
+    padding-left: 41%;  
+}*/
 
     /* -------------------------------- */
 
@@ -433,8 +461,8 @@ p{
 
 .galeria{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-    grid-auto-rows: minmax(300px, auto);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(400px, auto);
     gap: 2px;
     margin-top: 20PX;  
 }
@@ -457,7 +485,7 @@ p{
 
          /* ---  FOOTER --- */
 
-.footer-container{
+/* .footer-container{
     background: var(--c-white1);
     margin: 40px 0 3px 0;
     border-top: 1px solid var(--c-grey);
@@ -479,7 +507,7 @@ p{
     
 .footer-container .desarrollo i {
     padding-bottom: 2px;
-}
+} */
     
     /* ------------------------------- */
 
