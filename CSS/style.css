@@ -157,7 +157,6 @@ p{
     display: flex;
     align-content: center;
     justify-content: center;
-
     color: var(--c-black);
     font-size: 38px;
     font-weight: 800;
@@ -242,10 +241,6 @@ p{
     background-size: 100%;
 }
 
-.header{
-    grid-column: 1/8;
-    grid-row: 1/2;
-}
 
 .main-empresa{
     grid-column: 1/8;
@@ -277,10 +272,6 @@ p{
     color: #f1eaea;
     line-height: 160%;
     letter-spacing: -.02em; 
-}
-
-.footer{
-    grid-column: 1/8;
 }
     
     /* ---  HTML PRODUCTOS --- */ 
