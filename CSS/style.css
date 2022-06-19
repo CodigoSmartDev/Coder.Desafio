@@ -7,7 +7,8 @@
     --c-black: #020814;
     --c-white: #ffffff;
     --c-white1: #f5deb3;
-    --c-blue: #657482;
+    --c-blue: #0052cc;
+    --c-blue1: #657482;
     --c-blue2: #445B78;
     --c-grey: #aaa5a5;
 
@@ -32,108 +33,146 @@ p{
     letter-spacing: -.02em;
 }
 
+
   /* ------------------------------------ */
 
 .container-inicio{
     display: grid;
-    gap: 1.5em;
-    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 22em;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: 4.5em repeat(7, auto);
 }
 
-.container-inicio header,
-.container-inicio footer{
-    grid-column: 1/6;
-    background: var(--c-white1);
-}
-
-.container-inicio main {
-    grid-column: 1/6;
-}
-
-.container-inicio section{
-    grid-column: 1/6;
-    text-align: center;
-}
-
-    /* BARRA DE NAVEGACION */
-
-/* .container-navbar{
+.header{
     position: fixed;
-    top: 0;
-    background: var(--c-white1);
     width: 100%;
-    height: 70px;
+    background: var(--c-white1);
+    z-index: 9;
 }
 
-.navbar div ul{
-    margin-left: 60%;
+.header ul{
+    justify-content: center;
+    display: grid;
+    list-style-type: none;
+    align-content: flex-end;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1.5em);
+    list-style-type: none;
+} 
+
+.header .logo{
+    display: flex;
+    align-content: center;
+    
+    margin-left: 1em;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+    color: var(--c-black);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 5);
 }
 
-.navbar li{
-    display: inline-block;
-    margin: 15px;
-    padding-left: 10px; 
+.header ul .li-1{
+    grid-column: 7/8;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
 }
 
-.navbar li:hover >i{
+.header ul .li-2{
+    grid-column: 8/9;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul .li-3{
+    grid-column: 9/10;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul .li-4{
+    grid-column: 10/11;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+
+.header a{
+    color: var(--c-blue2);
+    font-size: 15px; 
+}
+
+.header li:hover >a{
     color: var(--c-grey);
 }
 
-.navbar li i{
-    box-sizing: border-box;
-    color: var(--c-blue2);
+
+.img-back {
+    grid-column: 1/6;
+    grid-row: 2/5;
 }
 
-
-    /*-------------------------  */
-
-    /* --- LOGOTIPO NAV --- */
-
-    /* ------------------------------------- */
-
-   /* --- CONTENIDO INICIO--- */
-  
-
-/* .titulo-container{
-    margin: 12px 0;
+.titulo{
+    z-index: 2;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 3em 0 2em 1em;
 }
 
-.titulo-container .titulo{
-    position: absolute; 
-    display: inline-block;
-    margin: 80px 20px; 
+.titulo h1 {
+    color: var(--c-black);
+    font-size: 4em;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -.09em;
 }
 
+.enlace {
+    z-index: 5;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: flex;
+    align-items: center;
+    margin: 1em;
 
-
-.titulo span{
-    display: block;
-}
-
-.enlace{
-    margin-top: 40px;
-    width: 200px;
-    height: 30px;
-    text-align: center;
-    padding-top: 10px;
-    background: var(--c-blue2);
-    border-radius: 15px;
+   
 }
 
 .enlace a{
     color: var(--c-white);
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    background: var(--c-blue);
+    border-radius: 15px;
 }
 
-.imagen-portada{
+
+.diseño{
+    grid-column: 1/6;
+    grid-row: 5/6;
     display: flex;
+    align-content: center;
+    justify-content: center;
+
+    color: var(--c-black);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -.09em;
+    
 }
 
-.h2-container{
-    margin: 50px;
-}
+.calidad{
+    grid-column: 1/6;
+    grid-row: 6/7;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 
-.h2-container span{
-    display: block;
     color: var(--c-black);
     font-size: 38px;
     font-weight: 800;
@@ -141,60 +180,121 @@ p{
     letter-spacing: -.09em;
 }
 
-.h2-container .diseño{
-    color: var(--c-blue);
-    padding-left: 30%;
+.parrafo{
+    grid-column: 1/6;
+    grid-row: 7/8;
+    display: flex;
+    text-align: center;
+    align-content: flex-end;
+    padding: 2em 0;
 }
 
-.h2-container .calidad{
-    padding-left: 41%;  
-}*/
+.footer{
+    grid-column: 1/6;
+    grid-row: 8/9;
+    background: var(--c-white1);
+}
 
-    /* -------------------------------- */
+.footer ul{
+    justify-content: center;
+    display: grid;
+    list-style-type: none;
+    align-content: flex-end;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1.5em);
+    color: var(--c-blue);
+}
 
+.footer .copyright{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    align-content: center;
+    justify-content: start; 
+    padding-left: 1em;
+}
+
+.footer .terminos{
+    grid-column: 4/8;
+    grid-row: 2/3;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+}
+
+.footer .desarrollo{
+    grid-column: 8/11;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1em;
+}
 
     /* --- HTML EMPRESA --- */
 
 .container-empresa{
+    display: grid;
+    /* grid-template-columns: repeat(3, auto); */
+    grid-template-rows: 4,5em repeat(2, 10em);
+
     background-image: url(../Imagenes/Empresa/taller.jpg);
     background-size: 100%;
 }
 
-.encabezado-empresa{
-    display: flex;
-    text-align: end;
-    padding: 5% 0 14% 0; 
+.header{
+    grid-column: 1/8;
+    grid-row: 1/2;
 }
 
-.encabezado-empresa h1{
-    padding-right: 20%;
+.main-empresa{
+    grid-column: 1/8;
+    grid-row: 2/3; 
+    padding-top: 6em;
+    display: grid;
+    grid-template-columns: auto repeat(3, 20%);
+    grid-template-rows: repeat(5, 25%);
+
+}
+
+.main-empresa .h1{
+    grid-column: 2/5;
+    grid-row: 1/2;
+    
+    display: flex;
+    justify-content: center;
     color: rgb(156, 154, 154)!important
 }
 
-.parrafo-empresa{
+.main-empresa p{
+    grid-column: 2/5;
+    grid-row: 2/5;
+    display: flex;
     text-align: justify;
+    justify-content: center;
+    padding-right: 1em;
     font-size: 20px;
     color: #f1eaea;
     line-height: 160%;
     letter-spacing: -.02em; 
 }
 
-
+.footer{
+    grid-column: 1/8;
+}
     
     /* ---  HTML PRODUCTOS --- */ 
 
 
-.encabezado-productos{
+ .encabezado-productos p{
     display: flex;
-    text-align: center;  
-}
-
-.h1{
-    width: 100%;
-}
+    justify-content: center;  
+} 
 
 .encabezado-productos h1, .encabezado-empresa h1{
-    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
     color: var(--c-black);
     font-size: 38px;
     font-weight: 800;
@@ -202,7 +302,7 @@ p{
     letter-spacing: -.09em;
   }
 
- h2, h3, h4, h5{
+ .cont-prod h2, h3, h4, h5{
     display: inline-block;
     color: var(--c-black);
     font-size: 38px;
@@ -214,9 +314,10 @@ p{
 
 .cont-prod{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     grid-auto-rows: minmax(400px, auto);
-    gap: 5px;
+    gap: 25px;
+    padding: 60px;
 }
 
 .portada{
@@ -225,7 +326,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 500px;   
 }
 
 .titulo-galeria:hover{
@@ -241,6 +342,118 @@ p{
 
     /* ----------------------------- */
 
+      /* GALERIAS GRID RESPONSIVE */
+
+.header{
+    position: fixed;
+    width: 100%;
+    background: var(--c-white1);
+    z-index: 9;
+}
+    
+.header ul{
+    justify-content: center;
+    display: grid;
+    list-style-type: none;
+    align-content: flex-end;
+    grid-template-columns: auto repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1.5em);
+    list-style-type: none;
+} 
+    
+.header .logo{
+    display: flex;
+    align-content: center;
+        
+    margin-left: 1em;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+    color: var(--c-black);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 5);
+}
+
+.header ul .atras{
+    grid-column: 8/9;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: end;
+}
+    
+.header ul .li-1{
+    grid-column: 9/10;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+    
+.header ul .li-2{
+    grid-column: 10/11;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+    
+.header ul .li-3{
+    grid-column: 11/12;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+    
+.header ul .li-4{
+    grid-column: 12/13;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul .li-5{
+    grid-column: 13/14;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+    
+.header a{
+    color: var(--c-blue2);
+    font-size: 15px; 
+}
+    
+.header li:hover >a{
+    color: var(--c-grey);
+} 
+
+.container-2{
+    padding: 70px ;  
+}
+
+.container-2 h1{
+    padding: 15px;
+}
+
+.galeria{
+    display: grid;
+    grid-auto-rows: 22em;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(400px, auto);
+    gap: 15px;
+    margin-top: 20PX;  
+}
+
+.img{
+    border-radius: 5px;
+    border: .5px solid grey; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.img:hover{
+    filter: opacity(.9);
+    transform: scale(1.005);
+}
+
+    /* -------------------------------- */
 
     /* --- HTML INGRESAR --- */
 
@@ -303,7 +516,7 @@ p{
 
     /* HTML Contacto */
 
-  .contacto-container {
+.contacto-container {
     padding-top: 100px;
     display: flex; 
     text-align: center;
@@ -402,46 +615,13 @@ p{
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 
-    /* ------------------------------------- */
-
-    
-       
-
-
-         /* ---  FOOTER --- */
-
-/* .footer-container{
-    background: var(--c-white1);
-    margin: 40px 0 3px 0;
-    border-top: 1px solid var(--c-grey);
-}
-    
-.footer-container ul li{
-    padding: 5px;
-    color: var(--c-blue);
-    display: inline-block;
-    padding: 5px;
-    margin: 10px;
-}
-    
-.footer-container .desarrollo{
-    margin-left: 52%;
-    margin-right: 1px;
-    padding-right: 0;
-}
-    
-.footer-container .desarrollo i {
-    padding-bottom: 2px;
-} */
-    
-    /* ------------------------------- */
-
+    /* ------------------------------------- */    
 
         /* HTML TERMINOS */
 
-.terminos{
+/* .terminos{
     padding-top: 100px;
-}
+} */
 
 .terminos span{
     color: var(--c-black);
