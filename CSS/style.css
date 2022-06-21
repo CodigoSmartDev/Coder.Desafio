@@ -23,7 +23,7 @@ body{
 
 a{
     text-decoration: none;
-    color: var(--c-blue)
+    color: var(--c-black)
 }
 
 p{
@@ -38,29 +38,27 @@ p{
 
 .container-inicio{
     display: grid;
-    /* grid-auto-rows: 22em; */
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto repeat(7, auto);
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 7% repeat(7, auto);
 }
 
-.header{
+.header ul{
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(3, auto);
     position: fixed;
     width: 100%;
     background: var(--c-white1);
     z-index: 9;
-}
-
-.header ul{
     list-style-type: none;
     justify-content: center;
     align-content: flex-end;
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(3, auto);
-} 
+}
 
 .header nav ul .logo{
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 1/2;
     
     margin-left: 1em;
     font-family: 'Shadows Into Light', cursive;
@@ -107,8 +105,8 @@ p{
 }
 
 
-.img-back {
-    grid-column: 1/6;
+.imagen-portada {
+    grid-column: 1/8;
     grid-row: 2/4;
 }
 
@@ -121,152 +119,22 @@ p{
 
 .titulo h1 {
     color: var(--c-black);
-    font-size: 4em;
+    font-size: 3.8em;
     font-weight: 800;
     line-height: 100%;
     letter-spacing: -.09em;
 }
 
-@media screen and (max-width:910px) {
-
-    .titulo{
-        padding: 1.5em 0 1.5em .5em;
-    }
-    .titulo h1{
-        font-size: 3em;
-    }
-
-    p{
-        font-size: 18px;
-        padding: 2em;
-    }
-
-    .container-inicio .diseño{
-        font-size: 34px;
-    }
-
-    .container-inicio .calidad{
-        font-size: 34px;
-    }
-
-    .header nav ul .logo{
-        font-size: 31px;
-    }
-
-    .header ul li a{
-        font-size: 14px;
-        padding: 5px;
-    }
-
-    .container-inicio .enlace a{
-        width: 80px;
-        height: 25px;
-        text-align: center;
-        padding-top: 8px;
-        border-radius: 14px;
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width:700px) {
-
-    .titulo{
-        padding: .4em 0 1em .5em;
-    }
-
-    .titulo h1{
-        font-size: 2em;
-    }
-
-    p{
-        font-size: 15px;
-        padding: 1.5em;
-    }
-
-    .header nav ul .logo{
-        font-size: 27px;
-    }
-
-    .header ul li a{
-        font-size: 11px;
-        padding: 5px;
-    }
-
-    .container-inicio .diseño{
-        font-size: 29px;
-    }
-
-    .container-inicio .calidad{
-        font-size: 29px;
-    }
-}
-
-@media screen and (max-width:490px) {
-
-    .titulo{
-        padding: .3em 0 .2em .3em;
-    }
-
-    .titulo h1{
-        font-size: 1.5em;
-    }
-
-    p{
-        font-size: 10px;
-        padding: 1em;
-    }
-
-    .header nav ul .logo{
-        font-size: 21px;
-        padding-top: 8px;
-    }
-
-    .header ul li a{
-        font-size: 8px;
-        padding: 5px;
-    }
-
-    .container-inicio .diseño{
-        font-size: 22px;
-    }
-
-    .container-inicio .calidad{
-        font-size: 22px;
-    }
-}
-
-.enlace {
-    z-index: 5;
-    grid-column: 1/3;
-    grid-row: 3/4;
-    display: flex;
-    align-content: flex-start;
-    margin-left: 1em;
-
-   
-}
-
-.enlace a{
-    color: var(--c-white);
-    width: 200px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    background: var(--c-blue);
-    border-radius: 15px;
-}
-
-
 .diseño{
-    grid-column: 1/6;
+    grid-column: 1/8;
     grid-row: 5/6;  
 }
 
 .calidad{
-    grid-column: 1/6;
+    grid-column: 1/8;
     grid-row: 6/7;
 }
+
 .diseño, .calidad{
     display: flex;
     align-content: center;
@@ -280,12 +148,12 @@ p{
 }
 
 .parrafo{
-    grid-column: 1/6;
+    grid-column: 1/8;
     grid-row: 7/8;
     display: flex;
     text-align: center;
     align-content: flex-end;
-    padding: 2em 3em;
+    margin: 2em 3em;
 }
 
 .footer{
@@ -310,7 +178,7 @@ p{
     display: flex;
     align-content: center;
     justify-content: start; 
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
 .footer .terminos{
@@ -327,8 +195,167 @@ p{
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-right: 1em;
+    margin-right: 1em;
 }
+
+@media screen and (max-width:960px) {
+
+    .titulo{
+        margin: 1.9em 0 0em .5em;
+    }
+    .titulo h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 18px;
+        margin: 0 2em;
+    }
+
+    ul li {
+        margin: 5px;
+    }
+
+    .container-inicio .diseño{
+        font-size: 34px;
+    }
+
+    .container-inicio .calidad{
+        font-size: 34px;
+    }
+
+    .header nav ul .logo{
+        font-size: 31px;
+    }
+
+    /* .container-inicio .enlace{
+        display: flex;
+        align-content: center;
+    }
+
+    .container-inicio .enlace a{
+        width: 150px;
+        height: 50px;
+        padding-top: 8px;
+        border-radius: 14px;
+        font-size: 12px;
+    } */
+}
+
+@media screen and (max-width:780px) {
+
+    .titulo h1{
+        font-size: 2.8em;
+        margin: .1em 0 .2em .2em;
+    }
+
+    p{
+        font-size: 17px;
+        margin: 0 1em;
+    }
+
+    ul li{
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .header nav ul .logo{
+        font-size: 27px;
+    }
+
+    .container-inicio .diseño{
+        font-size: 29px;
+    }
+
+    .container-inicio .calidad{
+        font-size: 29px;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .titulo h1{
+        font-size: 2.2em;
+        margin: .1em 0 .2em .3em;
+    }
+
+    p{
+        font-size: 16px;
+        margin: 0 1em;
+    }
+
+    ul li{
+        font-size: 13px;
+        margin: 5px;
+    }
+
+
+    .header nav ul .logo{
+        font-size: 21px;
+        padding-top: 8px;
+    }
+
+    .container-inicio .diseño{
+        font-size: 25px;
+    }
+
+    .container-inicio .calidad{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .titulo h1{
+        font-size: 1.5em;
+        margin: .4em 0 .2em .3em;
+    }
+
+    p{
+        font-size: 13px;
+        margin: 0 1em;
+    }
+
+    ul li{
+        font-size: 12px;
+        margin: 4px;
+    }
+
+    .header nav ul .logo{
+        font-size: 21px;
+        padding-top: 8px;
+    }
+
+    .container-inicio .diseño{
+        font-size: 22px;
+    }
+
+    .container-inicio .calidad{
+        font-size: 22px;
+    }
+}
+
+/* .container-inicio .enlace {
+    z-index: 5;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    margin-left: 1em;
+}
+
+.container-inicio .enlace a{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: var(--c-white);
+    background: var(--c-blue);
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;
+} */
+
+
 
     /* --- HTML EMPRESA --- */
 
@@ -339,6 +366,7 @@ p{
 
     background-image: url(../Imagenes/Empresa/taller.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 
