@@ -42,22 +42,26 @@ p{
     grid-template-rows: 7% repeat(7, auto);
 }
 
-.header ul{
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(3, auto);
+.header{
     position: fixed;
     width: 100%;
     background: var(--c-white1);
     z-index: 9;
-    list-style-type: none;
 }
+    
+.header ul{
+    justify-content: center;
+    display: grid;
+    list-style-type: none;
+    align-content: flex-end;
+    grid-template-columns: auto repeat(9, 1fr);
+    grid-template-rows: repeat(3, 1.5em);
+    list-style-type: none;
+} 
 
-.header nav ul .logo{
+.header .logo{
     grid-column: 1/2;
     grid-row: 1/2;
-    
     margin-left: 1em;
     font-family: 'Shadows Into Light', cursive;
     font-size: 35px;
@@ -65,28 +69,28 @@ p{
     text-shadow: 0 0 3px rgba(0, 0, 0, 5);
 }
 
-.header ul .li-1{
+.header .li-1{
     grid-column: 7/8;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
 
-.header ul .li-2{
+.header .li-2{
     grid-column: 8/9;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
 
-.header ul .li-3{
+.header .li-3{
     grid-column: 9/10;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
 
-.header ul .li-4{
+.header .li-4{
     grid-column: 10/11;
     grid-row: 2/3;
     display: flex;
@@ -95,7 +99,6 @@ p{
 
 .header a{
     color: var(--c-blue2);
-    font-size: 15px; 
 }
 
 .header li:hover >a{
@@ -112,7 +115,7 @@ p{
     z-index: 2;
     grid-column: 1/2;
     grid-row: 2/3;
-    margin-top: 4em;
+    margin: 2em 0 0 1.5em;
 }
 
 .titulo h1 {
@@ -198,11 +201,9 @@ p{
 
 @media screen and (max-width:960px) {
 
-    .titulo{
-        margin: 1.9em 0 0em .5em;
-    }
     .titulo h1{
         font-size: 3.5em;
+        margin: .1em 0 0em .2em;
     }
 
     p{
@@ -359,41 +360,38 @@ p{
 
 .container-empresa{
     display: grid;
-    /* grid-template-columns: repeat(3, auto); */
-    grid-template-rows: 4,5em repeat(2, 10em);
+    grid-template-rows: 70px repeat(4,20%);
+    grid-template-columns: repeat(4, auto); 
+}
 
+.container-empresa .main-empresa{
     background-image: url(../Imagenes/Empresa/taller.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-}
-
-
-.main-empresa{
-    grid-column: 1/8;
-    grid-row: 2/3; 
-    padding-top: 6em;
+    grid-column: 1/5;
+    grid-row: 2/6;  
     display: grid;
-    grid-template-columns: auto repeat(3, 20%);
-    grid-template-rows: repeat(5, 25%);
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(4, auto);
 
-}
+} 
 
-.main-empresa .h1{
-    grid-column: 2/5;
-    grid-row: 1/2;
-    
+.titulo-empresa{
+    grid-column: 4/11;
+    grid-row: 2/3;
     display: flex;
     justify-content: center;
+    padding: 2em;
     color: rgb(156, 154, 154)!important
 }
 
-.main-empresa p{
-    grid-column: 2/5;
-    grid-row: 2/5;
+.main-empresa .parrafo-empresa{
+    grid-column: 4/11;
+    grid-row: 3/6;
     display: flex;
     text-align: justify;
     justify-content: center;
-    padding-right: 1em;
+    padding: 1em;
     font-size: 20px;
     color: #f1eaea;
     line-height: 160%;
@@ -461,14 +459,14 @@ p{
 
       /* GALERIAS GRID RESPONSIVE */
 
-.header{
+.header-galeria{
     position: fixed;
     width: 100%;
     background: var(--c-white1);
     z-index: 9;
 }
     
-.header ul{
+.header-galeria ul{
     justify-content: center;
     display: grid;
     list-style-type: none;
@@ -478,7 +476,7 @@ p{
     list-style-type: none;
 } 
     
-.header .logo{
+.header-galeria .logo{
     display: flex;
     align-content: center;
         
@@ -489,54 +487,54 @@ p{
     text-shadow: 0 0 3px rgba(0, 0, 0, 5);
 }
 
-.header ul .atras{
+.header-galeria ul .atras{
     grid-column: 8/9;
     grid-row: 2/3;
     display: flex;
     justify-content: end;
 }
     
-.header ul .li-1{
+.header-galeria ul .li-1{
     grid-column: 9/10;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
     
-.header ul .li-2{
+.header-galeria ul .li-2{
     grid-column: 10/11;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
     
-.header ul .li-3{
+.header-galeria ul .li-3{
     grid-column: 11/12;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
     
-.header ul .li-4{
+.header-galeria ul .li-4{
     grid-column: 12/13;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
 
-.header ul .li-5{
+.header-galeria ul .li-5{
     grid-column: 13/14;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
 }
     
-.header a{
+.header-galeria a{
     color: var(--c-blue2);
     font-size: 15px; 
 }
     
-.header li:hover >a{
+.header-galeria li:hover >a{
     color: var(--c-grey);
 } 
 
