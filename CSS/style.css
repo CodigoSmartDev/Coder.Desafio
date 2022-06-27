@@ -52,8 +52,6 @@ p{
     background: var(--c-white1);
     z-index: 9;
     list-style-type: none;
-    justify-content: center;
-    align-content: flex-end;
 }
 
 .header nav ul .logo{
